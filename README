@@ -1,0 +1,12 @@
+Sample Project
+
+This project includes automated scenario for invalid login feature.
+
+## Installation
+* Java (Maven)
+* Selenium
+* Cucumber
+* Junit
+
+## Running the Tests
+Run `mvn clean test`.
