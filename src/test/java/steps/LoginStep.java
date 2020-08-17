@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import dataProvider.ConfigFileReader;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -53,8 +54,8 @@ public class LoginStep {
 
     @Then("^login should be successful$")
     public void checkSuccessfulLoginMessage(){
-        driver.findElement(By.className("flash success")).isDisplayed();
-        driver.findElement(By.className("flash success")).getText().contains(successfulLoginMsg);
+        Assert.assertTrue(driver.findElement(By.id("flash")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.className("flash")).getText().contains(successfulLoginMsg));
         driver.close();
     }
 }
