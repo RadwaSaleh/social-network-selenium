@@ -5,7 +5,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import dataProvider.ConfigFileReader;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +22,6 @@ public class LoginStep {
     public void navigateToLoginPage() throws Throwable{
         driver = new ChromeDriver();
         driver.navigate().to(loginUrl);
-        driver.manage().window().maximize();
     }
 
     @When("^user enters valid credentials$")

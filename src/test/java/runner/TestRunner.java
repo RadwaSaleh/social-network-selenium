@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "steps",
-        monochrome = true //it means that the console output for the Cucumber test are much more readable.
+        monochrome = true, //it means that the console output for the Cucumber test are much more readable.
+        plugin = {"pretty", "html:target/reports"}
 )
 public class TestRunner {
 }
